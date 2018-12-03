@@ -22,14 +22,14 @@ Write a Shell script that runs a Python script.
 The Python file name will be saved in the environment variable `$PYFILE`
 
 ```
-$ cat main.py 
+$ cat main.py
 #!/usr/bin/python3
 print("Holberton School")
 
 $ export PYFILE=main.py
 $ ./0-run
 Holberton School
-$ 
+$
 ```
 ---
 ### [1-run_inline](./1-run_inline)
@@ -69,7 +69,7 @@ Complete this [source](https://github.com/holbertonschool/0x00.py/blob/master/3-
 ```
 $ ./3-print_number.py
 98 Battery street
-$ 
+$
 ```
 ---
 
@@ -103,7 +103,7 @@ Complete this [`source code`](https://github.com/holbertonschool/0x00.py/blob/ma
 $ ./5-print_string.py
 Holberton SchoolHolberton SchoolHolberton School
 Holberton
-$ 
+$
 ```
 
 ---
@@ -122,7 +122,7 @@ $ ./6-concat.py
 Welcome to Holberton School!
 $ wc -l 6-concat.py
 5 6-concat.py
-$ 
+$
 ```
 
 ---
@@ -146,7 +146,7 @@ Last 2 letters: on
 Middle word: olberto
 $ wc -l 7-edges.py
 8 7-edges.py
-$ 
+$
 
 ```
 
@@ -167,7 +167,7 @@ $ ./8-concat_edges.py
 object-oriented programming with Python
 $ wc -l 8-concat_edges.py
 5 8-concat_edges.py
-$ 
+$
 ```
 
 ---
@@ -202,7 +202,7 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-$ 
+$
 ```
 
 ---
@@ -387,11 +387,11 @@ int main(void)
 </details>
 
 
-**Output** 
+**Output**
 
 ```
 $ gcc 10-main.c 10-check_cycle.c 10-linked_lists.c -o cycle
-$ ./cycle 
+$ ./cycle
 1024
 402
 98
