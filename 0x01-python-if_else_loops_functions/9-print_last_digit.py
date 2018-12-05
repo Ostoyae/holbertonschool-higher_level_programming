@@ -5,8 +5,7 @@ def print_last_digit(number):
     else:
         digit = number % 10
     if digit == 0:
-        print("0", end="")
-        return 0
+        print("{:d}".format(digit), end="")
     else:
-        print("{}".format(digit), end="")
-        return digit
+        print("{:d}".format(digit), end="")    
+    return digit
