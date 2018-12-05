@@ -52,6 +52,8 @@ static listint_t *new_node(int number, listint_t **tail)
 	listint_t *node;
 
 	node = malloc(sizeof(listint_t));
+	if (!node)
+		return (NULL);
 	node->n = number;
 	if (tail)
 		node->next = *tail;
