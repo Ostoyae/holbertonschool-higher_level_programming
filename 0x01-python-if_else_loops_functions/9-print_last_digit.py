@@ -7,5 +7,5 @@ def print_last_digit(number):
     if digit == 0:
         print("{:d}".format(digit), end="")
     else:
-        print("{:d}".format(digit), end="")    
+        print("{:d}".format(digit), end="")
     return digit
