@@ -4,7 +4,6 @@ def print_last_digit(number):
         digit = -number % 10
     else:
         digit = number % 10
-
     if digit == 0:
         print("0", end="")
         return 0
