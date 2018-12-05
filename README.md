@@ -14,3 +14,5 @@ This the first module for python. In this project i'll learn the following.
 * How to use strings
 * What are indexing and slicing in Python
 * What is the official Holberton Python coding style and how to check your code with PEP 8
+
+## [0x01-python-if_else_loops_functions](./0x01-python-if_else_loops_functions)
