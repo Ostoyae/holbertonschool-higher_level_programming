@@ -11,7 +11,7 @@ int rec_pal(listint_t **head, listint_t *tail);
 int is_palindrome(listint_t **head)
 {
 	if (!head || !(*head))
-		return 0;
+		return 1;
 	else if (!(*head)->next)
 		return 1;
 	return (rec_pal(head, (*head)->next));
