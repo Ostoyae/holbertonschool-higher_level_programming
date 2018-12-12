@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if type(matrix) == list:
+    if len(matrix) == 1 and len(matrix[0]) == 0:
+            print("")
+    else:
         for pos in matrix:
             if type(pos) == list:
                 lngth = len(pos)
@@ -9,5 +11,3 @@ def print_matrix_integer(matrix=[[]]):
                             "{:d}".format(pos[i]),
                             end="{}".format(
                                 " " if i < lngth - 1 else "\n"))
-            else:
-                return None
