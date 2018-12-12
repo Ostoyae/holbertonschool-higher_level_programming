@@ -10,6 +10,10 @@ int rec_pal(listint_t **head, listint_t *tail);
  */
 int is_palindrome(listint_t **head)
 {
+	if (!head || !(*head))
+		return 0;
+	else if (!(*head)->next)
+		return 1;
 	return (rec_pal(head, (*head)->next));
 }
 
@@ -22,13 +26,15 @@ int is_palindrome(listint_t **head)
  */
 int rec_pal(listint_t **head, listint_t *tail)
 {
-	int status = 0;
+	int status = 1;
 
 	if (tail)
 	{
 		status = rec_pal(head, tail->next);
-		if ((*head)->n == tail->n)
+		if ((*head)->n == tail->n && status)
 			status = 1;
+		else 
+			return (0);
 		*head = (*head)->next;
 	}
 
