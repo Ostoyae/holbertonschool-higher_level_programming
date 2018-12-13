@@ -14,6 +14,8 @@ def roman_to_int(roman_string):
         if n in list(rome):
             if num < 4000:
                 num += rome.get(n)
+            else:
+                return 0
         else:
             continue
 
