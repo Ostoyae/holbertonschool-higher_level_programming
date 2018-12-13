@@ -16,3 +16,10 @@ This the first module for python. In this project i'll learn the following.
 * What is the official Holberton Python coding style and how to check your code with PEP 8
 
 ## [0x01-python-if_else_loops_functions](./0x01-python-if_else_loops_functions)
+
+
+## [0x02-python-import_modules](./0x02-python-import_modules)
+
+## [0x03-python-data_structures](./0x03-python-data_structures)
+
+## []
