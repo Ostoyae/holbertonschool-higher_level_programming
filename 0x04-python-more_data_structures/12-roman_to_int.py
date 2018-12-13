@@ -7,9 +7,11 @@ def roman_to_int(roman_string):
             'L': 50, 'C': 100, 'D': 500,
             'M': 1000}
     ls = list(roman_string)
+    s = set(roman_string)
     num = 0
 
     for n in ls:
-        num += rome.get(n)
+        if num < 3999:
+            num += rome.get(n)
 
     return num
