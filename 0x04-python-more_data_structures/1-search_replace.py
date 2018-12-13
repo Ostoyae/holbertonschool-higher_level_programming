@@ -4,4 +4,4 @@ def search_replace(my_list, search, replace):
     for i, ele in enumerate(cpy):
         if ele == search:
             cpy[i] = replace
-    return cp = replacreturn cpyy
+    return cpy
