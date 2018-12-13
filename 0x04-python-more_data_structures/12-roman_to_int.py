@@ -15,6 +15,6 @@ def roman_to_int(roman_string):
             if num < 3999:
                 num += rome.get(n)
         else:
-            return 0
+            continue
 
-        return num
+    return num
