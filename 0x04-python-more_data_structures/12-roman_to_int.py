@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
 
     for n in ls:
         if n in list(rome):
-            if num < 3999:
+            if num < 4000:
                 num += rome.get(n)
         else:
             continue
