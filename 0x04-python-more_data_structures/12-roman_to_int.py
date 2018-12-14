@@ -13,13 +13,13 @@ def roman_to_int(roman_string):
     num = 0
     for i, n in enumerate(ls):
         if n in list(rome):
-            if i - 1 >= 0 :
+            if i - 1 >= 0:
                 if ls[i - 1] == 'V' and num <= 4:
                     num -= 1
                 elif ls[i - 1] == 'X' and num <= 10:
-                    num -= 1 
+                    num -= 1
                 elif (ls[i - 1] == 'L' or ls[i - 1] == 'C') and num <= 40:
-                    num +=  10
+                    num += 10
                 elif (ls[i - 1] == 'D' or ls[i - 1] == 'M') and num <= 400:
                     num += 100
                 else:
