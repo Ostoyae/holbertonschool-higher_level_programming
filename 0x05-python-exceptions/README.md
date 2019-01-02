@@ -2,23 +2,24 @@
 
 ## Tasks
 
-### [0-safe_print_list](./0-safe_print_list.py)
+### [0-safe_print_list](http://./0-safe_print_list.py)
 Function that prints the `x`elements in a list
 
-<li>Prototype: <code>def safe_print_list(my_list=[], x=0):</code></li>
-<li><code>my_list</code> can contain any type (integer, string, etc.)</li>
-<li>All elements must be printed on the same line followed by a new line.</li>
-<li><code>x</code> represents the number of elements to print</li>
-<li><code>x</code> can be bigger than the length of <code>my_list</code></li>
-<li>Returns the real number of elements printed</li>
-<li>You have to use <code>try: / except:</code> </li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>len()</code></li>
+- Prototype: `def safe_print_list(my_list=[], x=0):`
+- `my_list` can contain any type (integer, string, etc.)
+- All elements must be printed on the same line followed by a new line.
+- `x` represents the number of elements to print
+- `x` can be bigger than the length of `my_list`
+- Returns the real number of elements printed
+- You have to use `try: / except:` 
+- You are not allowed to import any module
+- You are not allowed to use `len()`
 
 <details>
 <summary> Test file: 0-main.py</summary>
 
-```Python
+
+```python
 #!/usr/bin/python3                                                    
 safe_print_list = __import__('0-safe_print_list').safe_print_list     
                                                                       
@@ -34,12 +35,12 @@ print("nb_print: {:d}".format(nb_print))
 my_list = []                                                          
 nb_print = safe_print_list(my_list, 2)                                
 print("nb_print: {:d}".format(nb_print))                              
-
 ```
+
 
 </details>
 
-```
+```markdown
 $ ./0-main.py
 12
 nb_print: 2
@@ -52,27 +53,27 @@ nb_print: 5
 nb_print: 0
 ```
 
+
 ---
 
-### [1-safe_print_integer](./1-safe_print_integer.py)
+### [1-safe_print_integer](http://./1-safe_print_integer.py)
 
 This Function prints an interger with `"{:d}".format()`
 
 
-<li>Prototype: <code>def safe_print_integer(value):</code></li>
-<li><code>value</code> can be any type (integer, string, etc.)</li>
-<li>The integer should be printed followed by a new line</li>
-<li>Returns <code>True</code> if <code>value</code> has been correctly printed (it means the <code>value</code> is an integer)</li>
-<li>Otherwise, returns <code>False</code></li>
-<li>You have to use <code>try: / except:</code> </li>
-<li>You have to use <code>"{:d}".format()</code> to print as integer</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>type()</code></li>
+- Prototype: `def safe_print_integer(value):`
+- `value` can be any type (integer, string, etc.)
+- The integer should be printed followed by a new line
+- Returns `True` if `value` has been correctly printed (it means the `value` is an integer)
+- Otherwise, returns `False`
+- You have to use `try: / except:` 
+- You have to use `"{:d}".format()` to print as integer
+- You are not allowed to import any module
+- You are not allowed to use `type()`
 
 <details>
 <summary>Test file: 1-main.py</summary>
-
-```Python
+```python
 #!/usr/bin/python3
 safe_print_integer = __import__('1-safe_print_integer').safe_print_integer
 
@@ -91,33 +92,34 @@ has_been_print = safe_print_integer(value)
 if not has_been_print:
     print("{} is not an integer".format(value))
 ```
-
 </details>
 
 **Example**
-```
+
+```markdown
 $ ./1-main.py
 89
 -89
 Holberton is not an integer
+
 ```
 
 ---
 
-### [2-safe_print_list_integers](./2-safe_print_list_integers.py)
+### [2-safe_print_list_integers](http://./2-safe_print_list_integers.py)
 
 ---
 
-### [3-safe_print_division](./3-safe_print_division.py)
+### [3-safe_print_division](http://./3-safe_print_division.py)
 
 ---
 
-### [4-list_division](./4-list_division.py)
+### [4-list_division](http://./4-list_division.py)
 
 ---
 
-### [5-raise_exception](./5-raise_exception.py)
+### [5-raise_exception](http://./5-raise_exception.py)
 
 ---
 
-### [6-raise_exception_msg](6-raise_exception_msg.py)
+### [6-raise_exception_msg](http://6-raise_exception_msg.py)
