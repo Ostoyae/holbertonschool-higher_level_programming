@@ -26,7 +26,7 @@ Function that prints the `x`elements in a list
 - You are not allowed to use `len()`
 
 <details>
-<summary> Test file: 0-main.py</summary>
+  <summary><b>Test file: 0-main.py</b></summary>
 
 ```python
 #!/usr/bin/python3                                                    
@@ -81,7 +81,7 @@ This Function prints an interger with `"{:d}".format()`
 - You are not allowed to use `type()`
 
 <details>
-<summary>Test file: 1-main.py</summary>
+  <summary><b>Test file: 1-main.py</b></summary>
 
 ```python
 #!/usr/bin/python3
@@ -135,7 +135,7 @@ Write a function that prints the first x elements of a list and only integers.
 
 
 <details>
-<summary>**Test file: 2-main.py**</summary>
+  <summary><b>Test file: 2-main.py</b></summary>
 
 ```python
 #!/usr/bin/python3
@@ -188,7 +188,7 @@ Write a function that divides 2 integers and prints the result.
 - You are not allowed to import any module
 
 <details>
-<summary>**Test file: 3-main.py**</summary>
+  <summary><b>Test file: 3-main.py</b></summary>
 
 ```python
 #!/usr/bin/python3
@@ -240,7 +240,7 @@ Write a function that divides element by element 2 lists.
 - You are not allowed to import any module
 
 <details>
-<summary>**Test file: 4-main.py**</summary>
+  <summary><b>Test file: 4-main.py</b></summary>
 
 ```python
 #!/usr/bin/python3
