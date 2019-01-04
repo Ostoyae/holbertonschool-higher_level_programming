@@ -32,7 +32,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         if self.__head is None:
             self.__head = Node(value)
-        elif self.__head.data > value:
+        elif self.__head.data >= value:
             self.__head = Node(value, self.__head)
         elif self.__head.data < value:
             node = self.__head
