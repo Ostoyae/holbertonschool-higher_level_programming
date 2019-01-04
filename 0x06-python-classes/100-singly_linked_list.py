@@ -46,9 +46,10 @@ class SinglyLinkedList:
 
     def __str__(self):
         str = ""
-        while self.__head:
-            str = str + "{}".format(self.__head.data)
-            if self.__head.next_node is not None:
-                str = str + "\n"
-            self.__head = self.__head.next_node
+        if self.__head is not None:
+            while self.__head:
+                str = str + "{}".format(self.__head.data)
+                if self.__head.next_node is not None:
+                    str = str + "\n"
+                self.__head = self.__head.next_node
         return str
