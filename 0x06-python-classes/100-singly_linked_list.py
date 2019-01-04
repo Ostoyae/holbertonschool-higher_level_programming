@@ -52,4 +52,6 @@ class SinglyLinkedList:
                 if self.__head.next_node is not None:
                     str = str + "\n"
                 self.__head = self.__head.next_node
+        else:
+            str = "\n"
         return str
