@@ -13,7 +13,7 @@ class Square:
             print()
             return
         if pos[1] > 0:
-                print("" * pos[1])
+                print(end="\n" * pos[1])
         for r in range(self.size):
             print(end=" " * pos[0])
             print("#" * self.size, end="")
