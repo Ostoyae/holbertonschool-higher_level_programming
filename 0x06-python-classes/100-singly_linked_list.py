@@ -53,5 +53,5 @@ class SinglyLinkedList:
                     str = str + "\n"
                 self.__head = self.__head.next_node
         else:
-            str = "\n"
+            str = "None\n"
         return str
