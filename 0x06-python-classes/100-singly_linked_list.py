@@ -3,7 +3,7 @@ class Node:
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
-    
+
     @property
     def data(self):
         return self.__data
@@ -17,7 +17,7 @@ class Node:
     @property
     def next_node(self):
         return self.__next_node
-   
+
     @next_node.setter
     def next_node(self, value):
         if value.__class__.__name__ is not "Node" and value is not None:
@@ -43,7 +43,6 @@ class SinglyLinkedList:
                     return
                 node = node.next_node
             node.next_node = Node(value)
-
 
     def __str__(self):
         str = ""
