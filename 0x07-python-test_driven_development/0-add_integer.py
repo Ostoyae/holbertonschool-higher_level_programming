@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-""" 
+"""
 Task 0 Module: addition for integer/float function
 
 >>> add_integer(10)
 108
 """
+
+
 def add_integer(a, b=98):
     """Return the addition for integers/float as an integer value
-    
+
     >>> add_integer(2)
     100
     >>> add_integer(1, 1)
