@@ -1,0 +1,39 @@
+>>> def print_square(size):
+...	if size == 0:
+...		print()
+...		return
+...	if size < 0 and isinstance(size, int):
+...	   raise ValueError("size must be >= 0")
+...	elif size < 0 and isinstance(size, float):
+...	   raise TypeError("size must be an integer")
+...	s = int(size)
+...	for r in range(s):
+...		print("#" * s)
+
+basic usage
+>>> print_square(3)
+###
+###
+###
+
+Passing Zero should print empty line
+>>> print_square(0)
+<BLANKLINE>
+
+Pass negative int
+>>> print_square(-3)
+Traceback (most recent call last):
+	...
+ValueError: size must be >= 0
+
+Pass float
+>>> print_square(3.0)
+###
+###
+###
+
+Pass float less then Zero
+>>> print_square(-3.0)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer

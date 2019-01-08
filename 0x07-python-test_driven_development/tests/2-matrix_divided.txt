@@ -1,0 +1,107 @@
+>>> def matrix_divided(matrix, div):
+...	if not isinstance(matrix, list):
+...		raise TypeError("matrix must be a matrix (list of lists) of\
+...		integers/floats")
+...	try:
+...	 	if not isinstance(matrix[0], list):
+...			raise TypeError("matrix must be a matrix (list of lists) of\
+...					integers/floats")
+...	 	size = len(matrix[0])
+...		if size is 0:
+...			raise TypeError("matrix must be a matrix (list of lists) of\
+...					integers/floats")
+...	except IndexError:
+...		raise TypeError("matrix must be a matrix (list of lists) of\
+...		integers/floats")
+...	if not isinstance(div, int) and not isinstance(div, float):
+...		raise TypeError("div must be a number")
+...
+...	for row in matrix:
+...		if len(row) is not size:
+...			raise TypeError("Each row of the matrix must have the\
+...					same size")
+...	try:
+...		mtx_cpy = list(map(lambda row: list(map(lambda ele: round(ele /
+...						div, 2),row)),matrix))
+...	except (ValueError, TypeError):
+...		raise TypeError("matrix must be a matrix (list of lists) of\
+...		integers/floats")
+...	except ZeroDivisionError:
+...	 	raise ZeroDivisionError("division by zero")
+...	return mtx_cpy
+
+Basic functionality should alway pass at minimum
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+...	]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix # doctest: +NORMALIZE_WHITESPACE
+[[1, 2, 3], [4, 5, 6]]
+
+Basic functionality should alway pass at minimum
+>>> matrix = [
+...	[1, 2, 3],
+...	]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+[[0.33, 0.67, 1.0]]
+>>> matrix # doctest: +NORMALIZE_WHITESPACE
+[[1, 2, 3]]
+
+Pass an empty list
+>>> matrix = []
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Pass an empty list of lists
+>>> matrix = [[]]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix is a row with an invalide type element
+>>> matrix = [["cat", 2, 3]]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+FAIL IF: matrix isn't a valide type
+>>> matrix = "Holberton"
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Fail if: matrix doesn't have rows
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Fail if: different size rows
+>>> matrix = [[1, 2], [3, 4, 5]]
+>>> matrix_divided(matrix, 3) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size
+
+FAIL IF: div is not a int or float type
+>>> matrix = [[1, 2, 3]]
+>>> matrix_divided(matrix, "0")
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+FAIL IF: div is zero
+>>> matrix = [[1, 2, 3]]
+>>> matrix_divided(matrix, 0) # doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+	...
+ZeroDivisionError: division by zero
+
