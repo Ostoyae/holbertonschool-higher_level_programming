@@ -19,15 +19,15 @@ def matrix_divided(matrix, div):
     """
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of\
-		integers/floats")
+                        integers/floats")
     try:
         if not isinstance(matrix[0], list):
             raise TypeError("matrix must be a matrix (list of lists) of\
-                                    integers/floats")
+                             integers/floats")
         size = len(matrix[0])
         if size is 0:
             raise TypeError("matrix must be a matrix (list of lists) of\
-                                    integers/floats")
+                            integers/floats")
     except IndexError:
         raise TypeError("matrix must be a matrix (list of lists) of\
             integers/floats")
@@ -36,13 +36,13 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if len(row) is not size:
             raise TypeError("Each row of the matrix must have the\
-                                    same size")
+                            same size")
     try:
         mtx_cpy = list(map(lambda row: list(
             map(lambda ele: round(ele / div, 2), row)), matrix))
     except (ValueError, TypeError):
         raise TypeError("matrix must be a matrix (list of lists) of\
-            integers/floats")
+                        integers/floats")
     except ZeroDivisionError:
         raise ZeroDivisionError("division by zero")
     return mtx_cpy
