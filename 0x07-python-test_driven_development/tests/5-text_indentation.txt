@@ -11,9 +11,9 @@
 ...	sp_str = split_to_list(sp_str, ":")
 ...
 ...	for i, ele in enumerate(sp_str):
-...		print(ele)
+...		print(ele, end="")
 ...		if i < len(sp_str) - 1:
-...			print("")
+...			print(end="\n" * 2)
 
 
 >>> def split_to_list(text, delim=" "):
@@ -22,7 +22,7 @@
 ...		txt_cpy = text
 ...		while txt_cpy:
 ...			if delim not in txt_cpy:
-...				sp_str.append(txt_cpy)
+...				sp_str.append(txt_cpy.strip())
 ...				break
 ...			temp = txt_cpy.split(delim,1)[0] + delim
 ...			txt_cpy = txt_cpy[len(temp):len(txt_cpy)]
@@ -64,4 +64,6 @@ I'm python:
 ?
 <BLANKLINE>
 woof
+
+>>> text_indentation("")
 
