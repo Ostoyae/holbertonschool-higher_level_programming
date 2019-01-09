@@ -1,14 +1,4 @@
->>> def print_square(size):
-...	if size == 0:
-...		print()
-...		return
-...	if size < 0 and isinstance(size, int):
-...	   raise ValueError("size must be >= 0")
-...	elif size < 0 and isinstance(size, float):
-...	   raise TypeError("size must be an integer")
-...	s = int(size)
-...	for r in range(s):
-...		print("#" * s)
+>>> print_square = __import__('4-print_square').print_square
 
 basic usage
 >>> print_square(3)
