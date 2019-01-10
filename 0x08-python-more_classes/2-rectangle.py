@@ -52,4 +52,6 @@ class Rectangle:
 
         Returns the perimeter as an int
         """
+        if self.width is 0 or self.height is 0:
+            return 0
         return (self.width + self.height) * 2
