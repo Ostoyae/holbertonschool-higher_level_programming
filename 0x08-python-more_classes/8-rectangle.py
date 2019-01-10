@@ -56,6 +56,8 @@ class Rectangle:
 
         Returns the perimeter as an int
         """
+        if self.width is 0 or self.height is 0:
+            return 0
         return (self.width + self.height) * 2
 
     def __str__(self):
@@ -64,9 +66,8 @@ class Rectangle:
 
         Returns a String
         """
-        rec = "\n"
-        if self.width is not 0 or self.height is not 0:
-            rec = ""
+        rec = ""
+        if self.width is not 0 and self.height is not 0:
             for row in range(self.height):
                 rec = rec + (str(self.print_symbol) * self.width)
                 if row < self.height - 1:
@@ -99,6 +100,6 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
-            return True
+            return rect_1.area()
         else:
-            return False
+            return rect_2.area()
