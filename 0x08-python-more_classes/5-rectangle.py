@@ -78,6 +78,5 @@ class Rectangle:
         """
         This function will reduce the number_of_instances by 1
         and notify the user when a instance is deleted
-
         """
         print("Bye rectangle...")
