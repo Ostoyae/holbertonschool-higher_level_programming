@@ -63,13 +63,8 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return True
         else:
-           return False
+            return False
 
     @classmethod
     def square(cls, size=0):
-        return Rectangle(size,size)
-
-
-
-
-
+        return Rectangle(size, size)

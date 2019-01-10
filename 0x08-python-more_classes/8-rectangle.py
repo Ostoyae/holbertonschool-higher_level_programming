@@ -63,8 +63,4 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return True
         else:
-           return False
-
-
-
-
+            return False
