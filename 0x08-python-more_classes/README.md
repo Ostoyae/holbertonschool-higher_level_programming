@@ -1,34 +1,40 @@
 # 0x08. Python - More Classes and Objects
 
-<li>What is OOP</li>
-<li>“first-class everything”</li>
-<li>What is a class</li>
-<li>What is an object and an instance</li>
-<li>What is the difference between a class and an object or instance</li>
-<li>What is an attribute</li>
-<li>What are and how to use public, protected and private attributes</li>
-<li>What is <code>self</code></li>
-<li>What is a method</li>
-<li>What is the special <code>__init__</code> method and how to use it</li>
-<li>What is Data Abstraction, Data Encapsulation, and Information Hiding</li>
-<li>What is a property</li>
-<li>What is the difference between an attribute and a property in Python</li>
-<li>What is the Pythonic way to write getters and setters in Python</li>
-<li>What are the special <code>__str__</code> and <code>__repr__</code> methods and how to use them</li>
-<li>What is the difference between <code>__str__</code> and <code>__repr__</code></li>
-<li>What is a class attribute</li>
-<li>What is the difference between a object attribute and a class attribute</li>
-<li>What is a class method</li>
-<li>What is a static method</li>
-<li>How to dynamically create arbitrary new attributes for existing instances of a class</li>
-<li>How to bind attributes to object and classes</li>
-<li>What is and what does contain <code>__dict__</code> of a class and of an instance of a class</li>
-<li>How does Python find the attributes of an object or class</li>
-<li>How to use the <code>getattr</code> function</li>
+
+<details>
+<summary><b>Details</b></summary>
+
+* What is OOP
+* "first-class everything"
+* What is a class
+* What is an object and an instance
+* What is the difference between a class and an object or instance
+* What is an attribute
+* What are and how to use public, protected and private attributes
+* What is `self`
+* What is a method
+* What is the special `__init__` method and how to use it
+* What is Data Abstraction, Data Encapsulation, and Information Hiding
+* What is a property
+* What is the difference between an attribute and a property in Python
+* What is the Pythonic way to write getters and setters in Python
+* What are the special `__str__` and `__repr__` methods and how to use them
+* What is the difference between `__str__` and `__repr__`
+* What is a class attribute
+* What is the difference between a object attribute and a class attribute
+* What is a class method
+* What is a static method
+* How to dynamically create arbitrary new attributes for existing instances of a class
+* How to bind attributes to object and classes
+* What is and what does contain `__dict__` of a class and of an instance of a class
+* How does Python find the attributes of an object or class
+* How to use the `getattr` function
+
+</details>
 
 ## TASKS
 
-### [0-rectangle](0-rectangle.py) 
+### [0-rectangle](0-rectangle.py)
 
 **Title: Simple rectangle**
 
@@ -55,36 +61,36 @@ $
 
 ---
 
-### [1-rectangle](1-rectangle.py) 
+### [1-rectangle](1-rectangle.py)
 
-**Title:**  **Real definition of a rectangle** 
+**Title:**  **Real definition of a rectangle**
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-<li>Private instance attribute: <code>width</code>:
-
-<ul>
-<li>property <code>def width(self):</code> to retrieve it</li>
-<li>property setter <code>def width(self, value):</code> to set it:
+* Private instance attribute: `width`:
 
 <ul>
-<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
-<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Private instance attribute: <code>height</code>:
+* property `def width(self):` to retrieve it
+* property setter `def width(self, value):` to set it:
 
 <ul>
-<li>property <code>def height(self):</code> to retrieve it</li>
-<li>property setter <code>def height(self, value):</code> to set it:
+* `width` must be an integer, otherwise raise a `TypeError` exception with the message `width must be an integer`<br>
+* if `width` is less than `0`, raise a `ValueError` exception with the message `width must be &gt;= 0`
+</ul>
+</ul>
+* Private instance attribute: `height`:
 
 <ul>
-<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
-<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
-<li>You are not allowed to import any module</li>
+* property `def height(self):` to retrieve it
+* property setter `def height(self, value):` to set it:
+
+<ul>
+* `height` must be an integer, otherwise raise a `TypeError` exception with the message `height must be an integer`<br>
+* if `height` is less than `0`, raise a `ValueError` exception with the message `height must be &gt;= 0`
+</ul>
+</ul>
+* Instantiation with optional `width` and `height`: `def __init__(self, width=0, height=0):`
+* You are not allowed to import any module
 
 
 <b>Test File:  1-main.py</b>
@@ -115,42 +121,42 @@ $
 
 ### [2-rectangle](2-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
 **Title:  Area and Perimeter**
 
-building on top of  class <code>Rectangle</code> from previous task.
+building on top of  class `Rectangle` from previous task.
 
-<li>Private instance attribute: <code>width</code>:
-
-<ul>
-<li>property <code>def width(self):</code> to retrieve it</li>
-<li>property setter <code>def width(self, value):</code> to set it:
+* Private instance attribute: `width`:
 
 <ul>
-<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
-<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Private instance attribute: <code>height</code>:
+* property `def width(self):` to retrieve it
+* property setter `def width(self, value):` to set it:
 
 <ul>
-<li>property <code>def height(self):</code> to retrieve it</li>
-<li>property setter <code>def height(self, value):</code> to set it:
+* `width` must be an integer, otherwise raise a `TypeError` exception with the message `width must be an integer`<br>
+* if `width` is less than `0`, raise a `ValueError` exception with the message `width must be &gt;= 0`
+</ul>
+</ul>
+* Private instance attribute: `height`:
 
 <ul>
-<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
-<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
-<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
-<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+* property `def height(self):` to retrieve it
+* property setter `def height(self, value):` to set it:
 
 <ul>
-<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter is equal to <code>0</code></li>
-</ul></li>
-<li>You are not allowed to import any module</li>
+* `height` must be an integer, otherwise raise a `TypeError` exception with the message `height must be an integer`<br>
+* if `height` is less than `0`, raise a `ValueError` exception with the message `height must be &gt;= 0`
+</ul>
+</ul>
+* Instantiation with optional `width` and `height`: `def __init__(self, width=0, height=0):`
+* Public instance method: `def area(self):` that returns the rectangle area
+* Public instance method: `def perimeter(self):` that returns the rectangle perimeter:
+
+<ul>
+* if `width` or `height` is equal to `0`, perimeter is equal to `0`
+</ul>
+* You are not allowed to import any module
 
 
 <details>
@@ -186,43 +192,43 @@ $
 
 ### [3-rectangle](3-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-<li>Private instance attribute: <code>width</code>:
-
-<ul>
-<li>property <code>def width(self):</code> to retrieve it</li>
-<li>property setter <code>def width(self, value):</code> to set it:
+* Private instance attribute: `width`:
 
 <ul>
-<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
-<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Private instance attribute: <code>height</code>:
+* property `def width(self):` to retrieve it
+* property setter `def width(self, value):` to set it:
 
 <ul>
-<li>property <code>def height(self):</code> to retrieve it</li>
-<li>property setter <code>def height(self, value):</code> to set it:
+* `width` must be an integer, otherwise raise a `TypeError` exception with the message `width must be an integer`<br>
+* if `width` is less than `0`, raise a `ValueError` exception with the message `width must be &gt;= 0`
+</ul>
+</ul>
+* Private instance attribute: `height`:
 
 <ul>
-<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
-<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
-<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
-<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+* property `def height(self):` to retrieve it
+* property setter `def height(self, value):` to set it:
 
 <ul>
-<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
-</ul></li>
-<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: (see example below)
+* `height` must be an integer, otherwise raise a `TypeError` exception with the message `height must be an integer`<br>
+* if `height` is less than `0`, raise a `ValueError` exception with the message `height must be &gt;= 0`
+</ul>
+</ul>
+* Instantiation with optional `width` and `height`: `def __init__(self, width=0, height=0):`
+* Public instance method: `def area(self):` that returns the rectangle area
+* Public instance method: `def perimeter(self):` that returns the rectangle perimeter:
 
 <ul>
-<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
-</ul></li>
-<li>You are not allowed to import any module</li>
+* if `width` or `height` is equal to `0`, perimeter has to be equal to `0`
+</ul>
+* `print()` and `str()` should print the rectangle with the character `#`: (see example below)
+
+<ul>
+* if `width` or `height` is equal to 0, return an empty string
+</ul>
+* You are not allowed to import any module
 
 
 **Test File: 3-main.py**
@@ -270,9 +276,9 @@ $
 
 ### [4-rectangle](4-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-- <code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> (see example below)
+- `repr()` should return a string representation of the rectangle to be able to recreate a new instance by using `eval()` (see example below)
 
 <details>
 <summary><b>Test File: 4-main.py</b></summary>
@@ -350,11 +356,11 @@ $
 
 ---
 
-### [5-rectangle](5-rectangle.py) 
+### [5-rectangle](5-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-- Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted
+- Print the message `Bye rectangle...` (`...` being 3 dots not ellipsis) when an instance of `Rectangle` is deleted
 
 <details>
 <summary><b>Test File: 5-main.py</b></summary>
@@ -392,13 +398,13 @@ $
 
 ### [6-rectangle](6-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-- Public class attribute <code>number_of_instances</code>:
+- Public class attribute `number_of_instances`:
 <ul>
-<li>Initialized to <code>0</code></li>
-<li>Incremented during each new instance instantiation</li>
-<li>Decremented during each instance deletion</li>
+* Initialized to `0`
+* Incremented during each new instance instantiation
+* Decremented during each instance deletion
 </ul>
 
 <details>
@@ -437,12 +443,12 @@ $
 
 ### [7-rectangle](7-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-- Public class attribute <code>print_symbol</code>:
-<li>Initialized to <code>#</code></li>
-<li>Used as symbol for string representation</li>
-<li>Can be any type</li>
+- Public class attribute `print_symbol`:
+* Initialized to `#`
+* Used as symbol for string representation
+* Can be any type
 </ul>
 
 
@@ -519,16 +525,16 @@ $
 ---
 
 
-### [8-rectangle](8-rectangle.py) 
+### [8-rectangle](8-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-Static method <code>def bigger_or_equal(rect_1, rect_2):</code> that returns the biggest rectangle based on the area
+Static method `def bigger_or_equal(rect_1, rect_2):` that returns the biggest rectangle based on the area
 
 <ul>
-<li><code>rect_1</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_1 must be an instance of Rectangle</code><br></li>
-<li><code>rect_2</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_2 must be an instance of Rectangle</code><br></li>
-<li>Returns <code>rect_1</code> if both have the same area value</li>
+* `rect_1` must be an instance of `Rectangle`, otherwise raise a `TypeError` exception with the message `rect_1 must be an instance of Rectangle`<br>
+* `rect_2` must be an instance of `Rectangle`, otherwise raise a `TypeError` exception with the message `rect_2 must be an instance of Rectangle`<br>
+* Returns `rect_1` if both have the same area value
 </ul>
 
 <details>
@@ -572,11 +578,11 @@ $
 ---
 
 
-### [9-rectangle](9-rectangle.py) 
+### [9-rectangle](9-rectangle.py)
 
-building on top of  class <code>Rectangle</code> that defines a rectangle 
+building on top of  class `Rectangle` that defines a rectangle
 
-- Class method <code>def square(cls, size=0):</code> that returns a new Rectangle instance with <code>width == height == size</code>
+- Class method `def square(cls, size=0):` that returns a new Rectangle instance with `width == height == size`
 
 **Test File: 9-main.py**
 
