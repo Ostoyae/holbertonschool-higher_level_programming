@@ -311,7 +311,7 @@ print(new_rectangle is my_rectangle)
 print(type(new_rectangle) is type(my_rectangle))
 ```
 
-<details>
+</details>
 
 <details>
 <summary><b>Example</b></summary>
@@ -379,7 +379,7 @@ except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
 ```
 
-<details>
+</details>
 
 **Example**
 
@@ -422,7 +422,7 @@ del my_rectangle_2
 print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
 ```
 
-<details>
+</details>
 
 **Example**
 
@@ -484,7 +484,7 @@ print("--")
 
 ```
 
-<details>
+</details>
 
 <details>
 <summary><b>Example</b></summary>
@@ -560,7 +560,7 @@ else:
     print("my_rectangle_2 is bigger than my_rectangle_1")
 ```
 
-<details>
+</details>
 
 **Example**
 
