@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module of Rectangle """
 
+
 class Rectangle:
     """Rectangle class"""
 
@@ -90,7 +91,7 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         """
         This function will compare two instance to each other
-        
+
         Return True is rect_1 is Large or equal to rect_2 else False
         """
         if not isinstance(rect_1, Rectangle):
