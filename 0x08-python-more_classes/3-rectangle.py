@@ -60,9 +60,8 @@ class Rectangle:
 
         Returns a String
         """
-        rec = "\n"
-        if self.width is not 0 or self.height is not 0:
-            rec = ""
+        rec = ""
+        if self.width is not 0 and self.height is not 0:
             for row in range(self.height):
                 rec = rec + ("#" * self.width)
                 if row < self.height - 1:
