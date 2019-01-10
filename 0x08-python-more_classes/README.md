@@ -28,7 +28,7 @@
 
 ## TASKS
 
-### [0-rectangle](http://0-rectangle.py) 
+### [0-rectangle](0-rectangle.py) 
 
 **Title: Simple rectangle**
 
@@ -55,7 +55,7 @@ $
 
 ---
 
-### [1-rectangle](http://1-rectangle.py) 
+### [1-rectangle](1-rectangle.py) 
 
 **Title:**  **Real definition of a rectangle** 
 
@@ -113,7 +113,7 @@ $
 
 ---
 
-### [2-rectangle](http://2-rectangle.py)
+### [2-rectangle](2-rectangle.py)
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -184,7 +184,7 @@ $
 
 ---
 
-### [3-rectangle](http://3-rectangle.py)
+### [3-rectangle](3-rectangle.py)
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -268,7 +268,7 @@ $
 
 ---
 
-### [4-rectangle](http://4-rectangle.py)
+### [4-rectangle](4-rectangle.py)
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -350,7 +350,7 @@ $
 
 ---
 
-### [5-rectangle](http://5-rectangle.py) 
+### [5-rectangle](5-rectangle.py) 
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -390,7 +390,7 @@ $
 ---
 
 
-### [6-rectangle](http://6-rectangle.py)
+### [6-rectangle](6-rectangle.py)
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -435,7 +435,7 @@ $
 ---
 
 
-### [7-rectangle](http://7-rectangle.py)
+### [7-rectangle](7-rectangle.py)
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -519,7 +519,7 @@ $
 ---
 
 
-### [8-rectangle](http://8-rectangle.py) 
+### [8-rectangle](8-rectangle.py) 
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
@@ -572,7 +572,7 @@ $
 ---
 
 
-### [9-rectangle](http://9-rectangle.py) 
+### [9-rectangle](9-rectangle.py) 
 
 building on top of  class <code>Rectangle</code> that defines a rectangle 
 
