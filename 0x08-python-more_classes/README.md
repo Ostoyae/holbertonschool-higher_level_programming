@@ -176,6 +176,7 @@ my_rectangle.height = 3
 print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 ```
 
+</details>
 
 **Example**
 
@@ -250,8 +251,6 @@ my_rectangle.height = 3
 print(my_rectangle)
 print(repr(my_rectangle))
 ```
-
-<details>
 
 **Example**
 
