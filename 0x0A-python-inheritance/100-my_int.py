@@ -2,6 +2,7 @@
 """MyInt Module
 """
 
+
 class MyInt(int):
 
     def __init__(self, value):
@@ -11,8 +12,7 @@ class MyInt(int):
     def __eq__(self, other):
         """inverts =="""
         return self.value != other
-    
+
     def __ne__(self, other):
         """invert !="""
         return self.value == other
-    
