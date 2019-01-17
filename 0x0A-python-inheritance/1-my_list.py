@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Doc"""
-
+"""MyList modules
+"""
 
 class MyList(list):
     """MyList class
