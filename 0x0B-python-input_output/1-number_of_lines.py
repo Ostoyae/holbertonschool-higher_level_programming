@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def number_of_lines(filename=""):
     """ Function that count the number of lines
     """
