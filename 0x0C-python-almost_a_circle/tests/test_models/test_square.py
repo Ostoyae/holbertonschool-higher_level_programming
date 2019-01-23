@@ -70,3 +70,7 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.sqr.update(id="cat")
 
+    def test_sqrToDict(self):
+        self.assertEqual(
+                self.sqr.to_dictionary(),
+                {"id": 1337, "size" : 5, "x" : 10, "y" : 10 })

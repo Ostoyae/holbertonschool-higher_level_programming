@@ -2,6 +2,7 @@
 from __future__ import print_function
 from models.base import Base
 import unittest
+import tempfile
 
 
 class TestBase(unittest.TestCase):

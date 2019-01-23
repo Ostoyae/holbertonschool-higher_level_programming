@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import unittest
+import os
+import tempfile
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
@@ -72,4 +74,18 @@ class TestRectangle(unittest.TestCase):
         self.rec = Rectangle(5, 5, 10, 10, 1337)
         with self.assertRaises(TypeError):
             self.rec.update(id="cat")
+    
+    def test_recToDict(self):
+        self.assertEqual(
+                self.rec.to_dictionary(),
+                {"id": 1337, "width": 5, "height" : 5, "x" : 10, "y" : 10 })
 
+    def test_rec_saveFile(self):
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        try:
+            self.rec.save_to_file([r1,r2])
+            f = open("Rectangle.json")
+            f.close()
+        finally:
+            os.remove("Rectangle.json")
