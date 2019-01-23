@@ -43,3 +43,14 @@ class Square(Rectangle):
             for k, v in kwargs.items():
                 self.validate(k, v)
                 setattr(self, k, v)
+
+
+    def to_dictionary(self):
+        """ Return dictionary representation of object
+        """
+        return {
+                "id" : self.id,
+                "size" : self.size,
+                "x" : self.x,
+                "y" : self.y
+                }
