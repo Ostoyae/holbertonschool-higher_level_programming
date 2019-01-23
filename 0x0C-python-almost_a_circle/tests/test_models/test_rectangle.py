@@ -50,3 +50,26 @@ class TestRectangle(unittest.TestCase):
     def test_recArea(self):
         self.assertEqual(self.rec.area(), 25)
 
+    def test_rec_str(self):
+        self.assertEqual("[Rectangle] (1337) 10/10 - 5/5", str(self.rec))
+
+    def test_rec_update_args(self):
+        """requires __str__ to work"""
+        self.rec = Rectangle(5, 5, 10, 10, 1337)
+        self.rec.update(1001, 2, 2, 1, 1)
+        self.assertEqual(str(self.rec), "[Rectangle] (1001) 1/1 - 2/2")
+
+
+    def test_rec_update_keyArgs(self):
+        """requires __str__ to work"""
+        self.rec = Rectangle(5, 5, 10, 10, 1337)
+        self.rec.update(x=100, y=1, width=50, height=25, id=42)
+        self.assertEqual(str(self.rec), "[Rectangle] (42) 100/1 - 50/25")
+
+
+    def test_rec_update_keyArgs(self):
+        """requires __str__ to work"""
+        self.rec = Rectangle(5, 5, 10, 10, 1337)
+        with self.assertRaises(TypeError):
+            self.rec.update(id="cat")
+
