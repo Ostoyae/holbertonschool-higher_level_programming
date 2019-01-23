@@ -6,7 +6,7 @@ class Rectangle(Base):
     """ Rectangle Class for modules rectangle
     """
 
-    __size_names = ["width", "height"]
+    __size_names = ["width", "height", "size"]
     __pos_names = ["x", "y"]
     
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -75,8 +75,33 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(attr))
         elif attr in Rectangle.__pos_names and not value >= 0:
             raise ValueError("{} must be >= 0".format(attr))
-        elif attr not in Rectangle.__size_names + Rectangle.__pos_names:
+        elif attr not in Rectangle.__size_names + Rectangle.__pos_names + ["id"]:
             raise TypeError("{} is not an attrbute of this object".format(attr))
+
+    def update(self, *args, **kwargs):
+        """ Update the values visa ordered list or key/word pair
+        
+        args order - id, width, height, x, y
+
+        >>> rec = Rectangle(1, 1, 5, 5, 1337)
+        >>> str(rec)
+        '[Rectangle] (1337) 5/5 - 1/1'
+        >>> rec.update(42, 10, 5, 25, 50)
+        >>> str(rec)
+        '[Rectangle] (42) 25/50 - 10/5'
+        >>> rec.update(id=1337)
+        >>> str(rec)
+        '[Rectangle] (1337) 25/50 - 10/5'
+        >>>
+        """
+        attr = ["id" ,"width", "height", "x", "y"]
+        if len(args) > 0:
+            for i in range(len(args)):
+                setattr(self, attr[i], args[i])
+        else:
+            for k, v in kwargs.items():
+                Rectangle.validate(k, v)
+                setattr(self, k, v)
 
     def area(self):
         """ Return the area of a rectangle
@@ -86,15 +111,15 @@ class Rectangle(Base):
     def display(self):
         """ Print out a rectangle to the prompt
 
-        >>> rec = Rectangle(5, 5, 2, 0)
+        >>> rec = Rectangle(5, 5, 1, 2)
         >>> rec.display()
         <BLANKLINE>
         <BLANKLINE>
-        #####
-        #####
-        #####
-        #####
-        #####
+         #####
+         #####
+         #####
+         #####
+         #####
         >>>
         """
         print(end="\n" * self.y)
@@ -102,7 +127,13 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.width)
 
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    def __str__(self):
+        """ return object details as str
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, 
+                self.x, 
+                self.y,
+                self.width,
+                self.height
+                )
