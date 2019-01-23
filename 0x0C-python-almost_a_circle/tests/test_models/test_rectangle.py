@@ -89,3 +89,68 @@ class TestRectangle(unittest.TestCase):
             f.close()
         finally:
             os.remove("Rectangle.json")
+
+    def test_rec_FromJsonString(self):
+       list_input = [
+               {'id': 89, 'width': 10, 'height': 4}, 
+               {'id': 7, 'width': 1, 'height': 7}
+               ]
+       json_ls_input = Rectangle.to_json_string(list_input) 
+       list_output = Rectangle.from_json_string(json_ls_input)
+       self.assertEqual(
+               list_output,
+               [
+                   {'height': 4, 'width': 10, 'id': 89},
+                   {'height': 7, 'width': 1, 'id': 7}
+                   ])
+
+
+    def test_rec_CreateInstance(self):
+        r1 = self.rec.to_dictionary()
+        r2 = Rectangle.create(**r1)
+        self.assertEqual(str(r2), '[Rectangle] (1337) 10/10 - 5/5')
+
+
+    def test_rec_CreateFromFile(self):
+        r1 = Rectangle(7, 7, 2, 8, 100)
+        r2 = Rectangle(2, 4)
+        objs = []
+        try:
+            Rectangle.save_to_file([r1,r2])
+            objs = Rectangle.load_from_file()
+        finally:
+            os.remove("Rectangle.json")
+        self.assertEqual(str(objs[0]), '[Rectangle] (100) 2/8 - 7/7')
+        self.assertEqual(str(objs[1]), '[Rectangle] ({}) 0/0 - 2/4'.format(r2.id))
+
+    def test_rec_MissingFile(self):
+        objs = list()
+        try:
+            objs = Rectangle.load_from_file()
+        finally:
+            pass
+        self.assertEqual(objs, [])
+
+    def test_rec_SaveCSV(self):
+        r1 = Rectangle(7, 7, 2, 8, 100)
+        r2 = Rectangle(2, 4)
+        try:
+            Rectangle.save_to_file_csv([r1,r2])
+            with open("Rectangle.csv") as f:
+                f.close()
+        finally:
+            os.remove("Rectangle.csv")
+
+
+    def test_rec_CreateFromFile_CSV(self):
+        r1 = Rectangle(7, 7, 2, 8, 100)
+        r2 = Rectangle(2, 4)
+        objs = []
+        try:
+            Rectangle.save_to_file_csv([r1,r2])
+            objs = Rectangle.load_from_file_csv()
+        finally:
+            os.remove("Rectangle.csv")
+        print(objs)
+        self.assertEqual(str(objs[0]), '[Rectangle] (100) 2/8 - 7/7')
+        self.assertEqual(str(objs[1]), '[Rectangle] ({}) 0/0 - 2/4'.format(r2.id))

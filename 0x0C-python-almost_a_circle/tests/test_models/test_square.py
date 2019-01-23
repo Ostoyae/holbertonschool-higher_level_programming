@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import unittest
+import os
 from models.square import Square
 
 class TestSquare(unittest.TestCase):
@@ -74,3 +75,52 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(
                 self.sqr.to_dictionary(),
                 {"id": 1337, "size" : 5, "x" : 10, "y" : 10 })
+
+    def test_sqr_saveFile(self):
+        r1 = Square(7, 2, 8)
+        r2 = Square(2, 4)
+        try:
+            self.sqr.save_to_file([r1,r2])
+            f = open("Square.json")
+            f.close()
+        finally:
+            os.remove("Square.json")
+
+    def test_sqr_FromJsonString(self):
+       list_input = [
+		       {'id': 89, 'size': 25 }, 
+		       {'id': 7, 'size' : 50 }
+		       ]
+       json_ls_input = Square.to_json_string(list_input) 
+       list_output = Square.from_json_string(json_ls_input)
+       self.assertEqual(
+               list_output,
+               [
+		       {'size' : 25, 'id': 89},
+		       {'size': 50, 'id': 7}
+		       ])
+
+    def test_sqr_CreateInstance(self):
+        r1 = self.sqr.to_dictionary()
+        r2 = Square.create(**r1)
+        self.assertEqual(str(r2), '[Square] (1337) 10/10 - 5')
+
+    def test_sqr_CreateFromFile(self):
+        r1 = Square(7, 2, 8, 100)
+        r2 = Square(2, 4)
+        objs = []
+        try:
+            Square.save_to_file([r1,r2])
+            objs = Square.load_from_file()
+        finally:
+            pass
+        self.assertEqual(str(objs[0]), '[Square] (100) 2/8 - 7')
+        self.assertEqual(str(objs[1]), '[Square] (1) 4/0 - 2')
+
+    def test_sqr_MissingFile(self):
+        objs = list()
+        try:
+            objs = Square.load_from_file()
+        finally:
+            pass
+        self.assertEqual(objs, [])
