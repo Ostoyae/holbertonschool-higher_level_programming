@@ -2,12 +2,12 @@
 import json
 import csv
 
+
 class Base():
     """ Base class for modules base.
     """
-    
-    __nb_objects = 0;
 
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """ Creates an ID"""
@@ -16,7 +16,7 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ convert object/dic into json strings
@@ -38,7 +38,7 @@ class Base():
         with open("{}.json".format(cls.__name__), "w") as f:
             json_str = cls.to_json_string(list_objc)
             f.write(json_str)
-    
+
     @staticmethod
     def from_json_string(json_string):
         """ Creates Dictionaries from a json string
@@ -46,7 +46,7 @@ class Base():
         if not json_string:
             return list()
         return json.JSONDecoder().decode(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """ Create new instance from a dictionary
@@ -80,7 +80,7 @@ class Base():
         """ Save out a list of objects as a csv file
         """
         with open(cls.__name__ + ".csv", "w") as f:
-            for idx, i  in enumerate(list_objs):
+            for idx, i in enumerate(list_objs):
                 d = i.to_dictionary()
                 if idx == 0:
                     w = csv.DictWriter(f, fieldnames=d.keys())
@@ -100,4 +100,3 @@ class Base():
                 objs.append(cls.create(**row))
             f.close()
         return objs
-

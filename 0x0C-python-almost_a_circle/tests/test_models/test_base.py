@@ -16,9 +16,10 @@ class TestBase(unittest.TestCase):
 
     def test_baseNoID(self):
         self.assertEqual(self.b1.id, 1)
-    
+
     def test_baseSomeID(self):
         self.assertEqual(self.b538.id, 538)
+
 
 if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(TestBase)

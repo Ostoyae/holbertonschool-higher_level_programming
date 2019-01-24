@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from models.base import Base 
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -8,7 +8,7 @@ class Rectangle(Base):
 
     __size_names = ["width", "height", "size"]
     __pos_names = ["x", "y"]
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Create an Rectangle object
         """
@@ -17,7 +17,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -29,7 +28,7 @@ class Rectangle(Base):
         """ Set width attribute"""
         Rectangle.validate("width", value)
         self.__width = value
-    
+
     @property
     def height(self):
         """ Return height attribute"""
@@ -51,7 +50,7 @@ class Rectangle(Base):
         """ Set X attribute"""
         Rectangle.validate("x", value)
         self.__x = value
-    
+
     @property
     def y(self):
         """ Return Y attribute"""
@@ -64,7 +63,7 @@ class Rectangle(Base):
         self.__y = value
 
     @staticmethod
-    def validate(attr , value):
+    def validate(attr, value):
         """ This function will will check if the value used for a specific
         attribute is valide
         """
@@ -76,11 +75,12 @@ class Rectangle(Base):
         elif attr in Rectangle.__pos_names and not value >= 0:
             raise ValueError("{} must be >= 0".format(attr))
         elif attr not in Rectangle.__size_names + Rectangle.__pos_names + ["id"]:
-            raise TypeError("{} is not an attrbute of this object".format(attr))
+            raise TypeError(
+                "{} is not an attrbute of this object".format(attr))
 
     def update(self, *args, **kwargs):
         """ Update the values visa ordered list or key/word pair
-        
+
         args order - id, width, height, x, y
 
         >>> rec = Rectangle(1, 1, 5, 5, 1337)
@@ -94,7 +94,7 @@ class Rectangle(Base):
         '[Rectangle] (1337) 25/50 - 10/5'
         >>>
         """
-        attr = ["id" ,"width", "height", "x", "y"]
+        attr = ["id", "width", "height", "x", "y"]
         if len(args) > 0:
             for i in range(len(args)):
                 setattr(self, attr[i], args[i])
@@ -131,21 +131,20 @@ class Rectangle(Base):
         """ return object details as str
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, 
-                self.x, 
-                self.y,
-                self.width,
-                self.height
-                )
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
 
     def to_dictionary(self):
         """ Return dictionary representation of object
         """
         return {
-                "id" : self.id,
-                "width" : self.width,
-                "height" : self.height,
-                "x" : self.x,
-                "y" : self.y
-                }
-
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }

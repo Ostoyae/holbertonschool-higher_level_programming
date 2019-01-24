@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Square Class for this module
     """
@@ -18,10 +19,10 @@ class Square(Rectangle):
         >>>
         """
         return "[Square] ({}) {}/{} - {}".format(
-                self.id,
-                self.x,
-                self.y,
-                self.width)
+            self.id,
+            self.x,
+            self.y,
+            self.width)
 
     @property
     def size(self):
@@ -44,13 +45,12 @@ class Square(Rectangle):
                 self.validate(k, v)
                 setattr(self, k, v)
 
-
     def to_dictionary(self):
         """ Return dictionary representation of object
         """
         return {
-                "id" : self.id,
-                "size" : self.size,
-                "x" : self.x,
-                "y" : self.y
-                }
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
