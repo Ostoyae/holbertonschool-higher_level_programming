@@ -67,6 +67,7 @@ class Rectangle(Base):
         """ This function will will check if the value used for a specific
         attribute is valide
         """
+        # if attr is not 'id': uncomment this if id can anything
         if not type(value) == int:
             raise TypeError("{} must be an integer".format(attr))
 
