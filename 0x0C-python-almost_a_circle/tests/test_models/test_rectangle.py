@@ -10,6 +10,22 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         self.rec = Rectangle(5, 5, 10, 10, 1337)
 
+    def test_subclass(self):
+        from models.base import Base
+        self.assertTrue(issubclass(Rectangle, Base))
+
+    def test_withoutArgs(self):
+        with self.assertRaises(TypeError):
+            Rectangle()
+
+    def test_oneArgs(self):
+        with self.assertRaises(TypeError):
+            Rectangle(5)
+
+    def test_args_overflow(self):
+        with self.assertRaises(TypeError):
+            Rectangle(4, 4, 4, 4, 4, 4)
+
     def test_rec1(self):
         self.rec1 = Rectangle(4, 4, 5, 5)
         self.assertEqual(self.rec1.width, 4)
@@ -63,8 +79,16 @@ class TestRectangle(unittest.TestCase):
     def test_recArea(self):
         self.assertEqual(self.rec.area(), 25)
 
+    def test_recArea_Raise(self):
+        with self.assertRaises(TypeError):
+            self.rec.area(5)
+
     def test_rec_str(self):
         self.assertEqual("[Rectangle] (1337) 10/10 - 5/5", str(self.rec))
+
+    def test_rec_str_error(self):
+        with self.assertRaises(TypeError):
+            self.rec.__str__(3)
 
     def test_rec_update_args(self):
         """requires __str__ to work"""
@@ -158,7 +182,6 @@ class TestRectangle(unittest.TestCase):
             objs = Rectangle.load_from_file_csv()
         finally:
             os.remove("Rectangle.csv")
-        print(objs)
         self.assertEqual(str(objs[0]), '[Rectangle] (100) 2/8 - 7/7')
         self.assertEqual(
             str(objs[1]), '[Rectangle] ({}) 0/0 - 2/4'.format(r2.id))

@@ -106,15 +106,15 @@ class TestSquare(unittest.TestCase):
 
     def test_sqr_CreateFromFile(self):
         r1 = Square(7, 2, 8, 100)
-        r2 = Square(2, 4)
+        r2 = Square(2, 4)  # id will be default to 2
         objs = []
         try:
             Square.save_to_file([r1, r2])
             objs = Square.load_from_file()
         finally:
-            pass
+            os.remove("Square.json")
         self.assertEqual(str(objs[0]), '[Square] (100) 2/8 - 7')
-        self.assertEqual(str(objs[1]), '[Square] (1) 4/0 - 2')
+        self.assertEqual(str(objs[1]), '[Square] (2) 4/0 - 2')
 
     def test_sqr_MissingFile(self):
         objs = list()

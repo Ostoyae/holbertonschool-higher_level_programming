@@ -8,17 +8,19 @@ import tempfile
 class TestBase(unittest.TestCase):
 
     def setUp(self):
-        self.b1 = Base()
         self.b538 = Base(538)
 
-    def tearDown(self):
-        print("base test tear down!")
-
     def test_baseNoID(self):
+        self.b2 = Base(2)
+        self.b1 = Base()
         self.assertEqual(self.b1.id, 1)
 
     def test_baseSomeID(self):
         self.assertEqual(self.b538.id, 538)
+
+    def test_arg_overflow(self):
+        with self.assertRaises(TypeError):
+            Base(1, 2)
 
 
 if __name__ == "__main__":
