@@ -42,7 +42,7 @@ class Base():
             else:
                 dictionary.append(ele.to_dictionary())
 
-        return json.JSONEncoder().encode(list_dictionaries)
+        return json.JSONEncoder().encode(dictionary)
 
     @classmethod
     def save_to_file(cls, list_objc):
