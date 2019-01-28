@@ -145,6 +145,11 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle.create(**r1)
         self.assertEqual(str(r2), '[Rectangle] (1337) 10/10 - 5/5')
 
+    def test_sqr_CreateInstance_02(self):
+        r1 = {"width" : 4}
+        r2 = Rectangle.create(**r1)
+        self.assertEqual(str(r2), '[Rectangle] (1) 0/0 - 4/1')
+
     def test_rec_CreateFromFile(self):
         r1 = Rectangle(7, 7, 2, 8, 100)
         r2 = Rectangle(2, 4)

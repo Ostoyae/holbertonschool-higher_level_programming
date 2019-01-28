@@ -9,6 +9,13 @@ class TestSquare(unittest.TestCase):
     def setUp(self):
         self.sqr = Square(5, 10, 10, 1337)
 
+    def tearDown(self):
+        Square.reset()
+
+    def test_sqr_WHcheck(self):
+        sqr = Square(1,0,0)
+        self.assertEqual(sqr.width, sqr.height)
+
     def test_sqr(self):
         self.sqr = Square(4, 5, 5)
         self.assertEqual(self.sqr.size, 4)
@@ -104,6 +111,11 @@ class TestSquare(unittest.TestCase):
         r2 = Square.create(**r1)
         self.assertEqual(str(r2), '[Square] (1337) 10/10 - 5')
 
+    def test_sqr_CreateInstance_02(self):
+        r1 = {"size" : 4}
+        r2 = Square.create(**r1)
+        self.assertEqual(str(r2), '[Square] (1) 0/0 - 4')
+
     def test_sqr_CreateFromFile(self):
         r1 = Square(7, 2, 8, 100)
         r2 = Square(2, 4)  # id will be default to 2
@@ -114,7 +126,7 @@ class TestSquare(unittest.TestCase):
         finally:
             os.remove("Square.json")
         self.assertEqual(str(objs[0]), '[Square] (100) 2/8 - 7')
-        self.assertEqual(str(objs[1]), '[Square] (2) 4/0 - 2')
+        self.assertEqual(str(objs[1]), '[Square] (1) 4/0 - 2')
 
     def test_sqr_MissingFile(self):
         objs = list()
