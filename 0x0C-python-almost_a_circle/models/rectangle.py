@@ -72,8 +72,12 @@ class Rectangle(Base):
         all_attr = Rectangle.__size_names + Rectangle.__pos_names + ["id"]
         # if attr is not 'id': uncomment this if id can anything
         if not type(value) == int:
-            raise TypeError("{} must be an integer".format(attr))
-
+            raise TypeError(
+                "{} must be an integer".
+                format(
+                    "width" if attr == "size" else attr
+                )
+            )
         if attr in Rectangle.__size_names and value <= 0:
             raise ValueError("{} must be > 0".format(attr))
         elif attr in Rectangle.__pos_names and not value >= 0:
