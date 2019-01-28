@@ -68,6 +68,8 @@ class Rectangle(Base):
         """ This function will will check if the value used for a specific
         attribute is valide
         """
+
+        all_attr = Rectangle.__size_names + Rectangle.__pos_names + ["id"]
         # if attr is not 'id': uncomment this if id can anything
         if not type(value) == int:
             raise TypeError("{} must be an integer".format(attr))
@@ -76,9 +78,7 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(attr))
         elif attr in Rectangle.__pos_names and not value >= 0:
             raise ValueError("{} must be >= 0".format(attr))
-        elif attr not in Rectangle.__size_names +
-        Rectangle.__pos_names +
-        ["id"]:
+        elif attr not in all_attr:
             raise TypeError(
                 "{} is not an attrbute of this object".format(attr))
 
