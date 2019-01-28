@@ -36,13 +36,13 @@ class Base():
         dictionary = []
         if not list_dictionaries or len(list_dictionaries) == 0:
             return list()
-        for ele in list_dictionaries:
-            if isinstance(ele, dict):
-                dictionary.append(ele)
-            else:
-                dictionary.append(ele.to_dictionary())
+#         for ele in list_dictionaries:
+#            if isinstance(ele, dict):
+#                dictionary.append(ele)
+#            else:
+#                dictionary.append(ele.to_dictionary())
 
-        return json.JSONEncoder().encode(dictionary)
+        return json.JSONEncoder().encode(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objc):
