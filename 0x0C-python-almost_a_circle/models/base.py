@@ -6,7 +6,7 @@ import csv
 
 class Base():
     """Class Base 
-    
+
     class for modules base.
 
     This is the base class for all other class to be built on top of
