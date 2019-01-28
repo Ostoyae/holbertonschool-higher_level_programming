@@ -79,7 +79,12 @@ class Rectangle(Base):
                 )
             )
         if attr in Rectangle.__size_names and value <= 0:
-            raise ValueError("{} must be > 0".format(attr))
+            raise ValueError(
+                "{} must be > 0".
+                format(
+                    "width" if attr == "size" else attr
+                )
+            )
         elif attr in Rectangle.__pos_names and not value >= 0:
             raise ValueError("{} must be >= 0".format(attr))
         elif attr not in all_attr:
