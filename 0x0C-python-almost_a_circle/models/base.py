@@ -35,7 +35,7 @@ class Base():
         """
         dictionary = []
         if not list_dictionaries or len(list_dictionaries) == 0:
-            return list()
+            return "[]"
         for ele in list_dictionaries:
             if isinstance(ele, dict):
                 dictionary.append(ele)
