@@ -19,6 +19,9 @@ class Base():
     
     @staticmethod
     def reset():
+        """ Resets private var __nb_objects to 0
+        used for testing only
+        """
         Base.__nb_objects = 0
 
     @staticmethod
