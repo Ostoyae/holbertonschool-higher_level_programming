@@ -5,7 +5,7 @@ import csv
 
 
 class Base():
-    """Class Base 
+    """Class Base
 
     class for modules base.
 
@@ -34,7 +34,7 @@ class Base():
         """ convert object/dic into json strings
         """
         dictionary = []
-        if not list_dictionaries:
+        if not list_dictionaries or len(list_dictionaries) == 0:
             return list()
         for ele in list_dictionaries:
             if isinstance(ele, dict):
