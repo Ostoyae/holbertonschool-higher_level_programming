@@ -4,7 +4,9 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Square Class for this module
+    """Square Class 
+    
+    define the class square for this module
     """
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -27,15 +29,18 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ Getter for size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """Set the size attribute"""
         self.validate("size", value)
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update a squre object via args or key-word pair"""
         attr = ["id", "size", "x", "y"]
         if len(args) > 0:
             for i in range(len(args)):
