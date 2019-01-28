@@ -76,7 +76,9 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(attr))
         elif attr in Rectangle.__pos_names and not value >= 0:
             raise ValueError("{} must be >= 0".format(attr))
-        elif attr not in Rectangle.__size_names + Rectangle.__pos_names + ["id"]:
+        elif attr not in Rectangle.__size_names +
+        Rectangle.__pos_names +
+        ["id"]:
             raise TypeError(
                 "{} is not an attrbute of this object".format(attr))
 
