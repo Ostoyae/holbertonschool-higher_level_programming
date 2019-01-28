@@ -16,7 +16,7 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def reset():
         """ Resets private var __nb_objects to 0
