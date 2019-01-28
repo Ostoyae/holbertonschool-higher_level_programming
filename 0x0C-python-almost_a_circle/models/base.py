@@ -64,9 +64,9 @@ class Base():
         """ Create new instance from a dictionary
         """
         if cls.__name__ == "Square":
-            obj = cls(1, 1, 1)
+            obj = cls(1, 0, 0)
         else:
-            obj = cls(1, 1, 1, 1)
+            obj = cls(1, 1, 0, 0)
         obj.update(**dictionary)
         return obj
 
