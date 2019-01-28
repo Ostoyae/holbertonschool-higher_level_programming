@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""Define class Base"""
 import json
 import csv
 
 
 class Base():
-    """ Base class for modules base.
+    """Class Base 
+    
+    class for modules base.
+
+    This is the base class for all other class to be built on top of
     """
 
     __nb_objects = 0
