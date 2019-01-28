@@ -4,7 +4,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Square Class 
+    """Square Class
 
     define the class square for this module
     """
