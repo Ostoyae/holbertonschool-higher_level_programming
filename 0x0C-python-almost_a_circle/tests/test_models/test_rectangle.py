@@ -10,6 +10,9 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         self.rec = Rectangle(5, 5, 10, 10, 1337)
 
+    def tearDown(self):
+        Rectangle.reset()
+
     def test_subclass(self):
         from models.base import Base
         self.assertTrue(issubclass(Rectangle, Base))
@@ -47,10 +50,10 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(5, 5)
         r3 = Rectangle(5, 5)
         r4 = Rectangle(5, 5)
-        self.assertEqual(r1.id, 5)
-        self.assertEqual(r2.id, 6)
-        self.assertEqual(r3.id, 7)
-        self.assertEqual(r4.id, 8)
+        self.assertEqual(r1.id, 1)
+        self.assertEqual(r2.id, 2)
+        self.assertEqual(r3.id, 3)
+        self.assertEqual(r4.id, 4)
 
     def test_rec_validation(self):
         """ test Raises work"""
