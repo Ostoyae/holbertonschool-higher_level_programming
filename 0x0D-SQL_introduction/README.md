@@ -2,48 +2,6 @@
 
 ## Tasks
 
-<!-- toc -->
-
-[0. List databases](#0. List databases)
-
-[1. Create a database](#1. Create a database)
-
-[2. Delete a database](#2. Delete a database)
-
-[3. List tables](#3. List tables)
-
-[4. First table](#4. First table)
-
-[5. Full description](#5. Full description)
-
-[6. List all in table](#6. List all in table)
-
-[7. First add](#7. First add)
-
-[8. Count 89](#8. Count 89)
-
-[9. Full creation](#9. Full creation)
-
-[10. List by best](#10. List by best)
-
-[11. Select the best](#11. Select the best)
-
-[12. Cheating is bad](#12. Cheating is bad)
-
-[13. Score too low](#13. Score too low)
-
-[14. Average](#14. Average)
-
-[15. Number by score](#15. Number by score)
-
-[16. Say my name](#16. Say my name)
-
-[17. Go to UTF8](#17. Go to UTF8)
-
-<!-- tocstop -->
-
-
-
 ### [0. List databases]
 
 Write a script that lists all databases of your MySQL server.
