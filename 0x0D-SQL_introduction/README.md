@@ -3,7 +3,7 @@
 ## Tasks
 
 
-[1. Create a database](1-create_database_if_missing.sql)(#0. List databases)
+[0. List databases](###0. List databases)
 
 [1. Create a database](#1. Create a database)
 
