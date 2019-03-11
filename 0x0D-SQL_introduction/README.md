@@ -2,8 +2,9 @@
 
 ## Tasks
 
+<!-- toc -->
 
-[0. List databases](###0. List databases)
+[0. List databases](#0. List databases)
 
 [1. Create a database](#1. Create a database)
 
@@ -39,15 +40,11 @@
 
 [17. Go to UTF8](#17. Go to UTF8)
 
-[18. Temperatures #0](#18. Temperatures #0)
-
-[19. Temperatures #1](#19. Temperatures #1)
-
-[20. Temperatures #2](#20. Temperatures #2)
+<!-- tocstop -->
 
 
 
-### [0. List databases](0-list_databases.sql)
+### [0. List databases]
 
 Write a script that lists all databases of your MySQL server.
 
