@@ -2,7 +2,7 @@
 """Modules that declare a class states
 """
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from relationship_city import Base
 
 
@@ -17,11 +17,9 @@ class State(Base):
 # one to many relationship
     cities = relationship(
         'City',
-        backref=backref(
-            'state',
-            cascade='all, delete-orphan'
+        backref='state',
+        cascade='all, delete-orphan'
         )
-    )
 
 
 if __name__ == "__main__":

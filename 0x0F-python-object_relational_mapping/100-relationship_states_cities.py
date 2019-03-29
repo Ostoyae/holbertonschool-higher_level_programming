@@ -20,7 +20,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.add(sf)
+    session.add(st)
     session.commit()
 
     session.close()
