@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Query all states in a table in db hbtn_0e_0_usa
 """
 import sys
