@@ -17,8 +17,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        instance = session.query(State).filter(State.name == sys.argv[4])
-        print("{}: {}".format(instance.id, instance.name))
+        instance = session.query(State)\
+                .filter(State.name == sys.argv[4])\
+                .first()
+        print("{}".format(instance.id))
     except:
         print("Not found")
     session.close()
