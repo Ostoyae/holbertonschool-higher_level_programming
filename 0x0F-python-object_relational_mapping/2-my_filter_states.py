@@ -19,7 +19,7 @@ if __name__ == "__main__":
         query = '''
         SELECT *
         FROM states
-        WHERE name = '{:s}'
+        WHERE name = BINARY '{:s}'
         ORDER BY id ASC'''.format(args[4])
         cur.execute(query)
         rows = cur.fetchall()
