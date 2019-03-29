@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     try:
         cur.execute('''
-        SELECT * 
-        FROM states 
+        SELECT *
+        FROM states
         WHERE `name` LIKE "N%"
         ORDER BY `id` ASC''')
         rows = cur.fetchall()
