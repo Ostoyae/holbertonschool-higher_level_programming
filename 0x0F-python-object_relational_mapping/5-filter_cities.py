@@ -27,8 +27,8 @@ if __name__ == "__main__":
     for c in range(len(rows)):
         print("{}".format(
             rows[c][0]),
-            end="{}".format(", " if c < len(rows) - 1 else "\n")
+            end="{}".format(", " if c < len(rows) - 1 else "")
         )
-
+    print()
     cur.close()
     db.close()
