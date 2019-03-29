@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+'''create state and cities table with relationship
+'''
 import sys
 from relationship_city import Base, City
 from relationship_state import State
@@ -15,13 +16,12 @@ if __name__ == '__main__':
         )
     )
     Base.metadata.create_all(engine)
-    sf = City(name='San Francisco')
-    ca = State(name='California', cities=[sf])
+    sf = City(name='San Francisco', state=State(name='California'))
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.add(ca)
+    session.add(sf)
     session.commit()
 
     session.close()
