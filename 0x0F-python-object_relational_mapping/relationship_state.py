@@ -16,9 +16,10 @@ class State(Base):
 
 # one to many relationship
     cities = relationship(
-            'City',
-            backref='state'
-            )
+        'City',
+        backref='state'
+    )
+
 
 if __name__ == "__main__":
     pass
