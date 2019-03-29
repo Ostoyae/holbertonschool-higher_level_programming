@@ -17,8 +17,10 @@ class State(Base):
 # one to many relationship
     cities = relationship(
         'City',
-        backref='state',
-	cascade='all, delete-orphan'
+        backref=backref(
+            'state',
+            cascade='all, delete-orphan'
+        )
     )
 
 
