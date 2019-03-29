@@ -1,4 +1,4 @@
-/usr/bin/python3
+#!/usr/bin/python3
 """ Filter db for a state safely
 """
 import sys

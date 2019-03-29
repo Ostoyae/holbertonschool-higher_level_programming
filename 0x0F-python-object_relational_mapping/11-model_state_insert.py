@@ -1,4 +1,4 @@
-/usr/bin/python3
+#!/usr/bin/python3
 '''List all state in a table via SQLAlchemy
 '''
 import sys

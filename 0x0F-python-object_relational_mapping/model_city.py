@@ -1,4 +1,4 @@
-/usr/bin/python3
+#!/usr/bin/python3
 '''Module that declase a class city
 '''
 from sqlalchemy import Column, Integer, String, ForeignKey
