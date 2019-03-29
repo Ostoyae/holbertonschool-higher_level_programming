@@ -1,4 +1,4 @@
-/usr/bin/python3
+#!/usr/bin/python3
 """Filter states in a table that start with "N" and ordered by `id`
 """
 import sys
