@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/usr python3
 '''print out all State and cities using SQLAlchemy relationships
 '''
 import sys
@@ -19,9 +19,12 @@ if __name__ == '__main__':
     sess = Session()
 
     state_list = sess.query(State).join(City).order_by(State.id, City.id)
-    for s in state_list:
-        print('{}: {}'.format(s.id, s.name))
-        for c in s.cities:
-            print('    {}: {}'.format(c.id, c.name))
+    if state_list is not None:
+        for s in state_list:
+            print('{}: {}'.format(s.id, s.name))
+            for c in s.cities:
+                print('    {}: {}'.format(c.id, c.name))
+    else:
+        print()
     sess.close()
     engine.dispose()
