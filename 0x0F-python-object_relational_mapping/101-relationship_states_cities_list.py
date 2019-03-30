@@ -18,7 +18,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     sess = Session()
 
-    state_list = sess.query(State).join(City).order_by(State.id, City.id)
+    state_list = sess.query(State).order_by(State.id)
     if state_list is not None:
         for s in state_list:
             print('{}: {}'.format(s.id, s.name))
