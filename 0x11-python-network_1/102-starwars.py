@@ -2,6 +2,7 @@
 # send a request to Star Wars Api
 import requests
 
+
 def get_film_title(film={}, key=""):
     if key in film:
         return film[key]
@@ -13,8 +14,8 @@ def get_film_title(film={}, key=""):
             return title
         except ValueError:
             print("whoops")
-        
-    
+
+
 if __name__ == '__main__':
     import requests
     from sys import argv
