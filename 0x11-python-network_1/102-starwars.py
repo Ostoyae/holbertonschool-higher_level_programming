@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 # send a request to Star Wars Api
-import requests
 
 
 def get_film_title(film={}, key=""):
+    '''This fucntion will check a dictionary for a film
+    this function main purpose if to reduce the number of GET
+    request onto star wars api.
+    '''
     if key in film:
         return film[key]
     else:
