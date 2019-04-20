@@ -3,6 +3,7 @@
 this script defind a function to find a peak
 """
 
+
 def find_peak(list_of_integers):
     ls = list_of_integers
     peak = None
@@ -22,7 +23,7 @@ def find_peak(list_of_integers):
         peak = find_peak(ls[0:(cur - 1)])
 
     return peak
-    
-    
+
+
 if __name__ == "__main__":
     pass
