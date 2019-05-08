@@ -2,7 +2,7 @@
 // find the second biggest
 const list = process.argv.slice(2)
   .map(x => parseInt(x))
-  .filter(x => x === NaN);
+  .filter(x => !isNaN(x));
 let max = list[0];
 let prev = list[0];
 
