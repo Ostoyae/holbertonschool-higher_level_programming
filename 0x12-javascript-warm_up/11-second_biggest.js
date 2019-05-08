@@ -1,6 +1,8 @@
 #!/usr/bin/node
 // find the second biggest
-const list = process.argv.slice(2).map(x => parseInt(x));
+const list = process.argv.slice(2)
+  .map(x => parseInt(x))
+  .filter(x => x === NaN);
 let max = list[0];
 let prev = list[0];
 
