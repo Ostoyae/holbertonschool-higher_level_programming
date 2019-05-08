@@ -6,7 +6,7 @@ let prev = list[0];
 
 if (list.length < 2) {
   console.log(0);
-  process.exi();
+  process.exit();
 }
 
 list.forEach(x => {
