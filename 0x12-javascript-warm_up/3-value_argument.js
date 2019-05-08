@@ -9,5 +9,5 @@ input.forEach((val, index) => {
 });
 
 if (c === 0) {
-  console.log('No Argument');
+  console.log('No argument');
 }
