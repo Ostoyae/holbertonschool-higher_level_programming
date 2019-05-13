@@ -30,8 +30,10 @@ module.exports = class Square extends SquareV1 {
     if (c === undefined) {
       c = 'X';
     }
-    Array(this.size)
-      .fill()
-      .map(() => console.log(c.repeat(this.size)));
+    if (this.size > 0) {
+      Array(this.size)
+        .fill()
+        .map(() => console.log(c.repeat(this.size)));
+    }
   }
 };
