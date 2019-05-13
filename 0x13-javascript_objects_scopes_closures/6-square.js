@@ -27,7 +27,7 @@ module.exports = class Square extends SquareV1 {
    * @param c - character to print with.
    */
   charPrint (c) {
-    if (c === undefined || c === '' || c.length > 1) {
+    if (c === undefined || c === '') {
       c = 'X';
     }
     if (this.size > 0) {
