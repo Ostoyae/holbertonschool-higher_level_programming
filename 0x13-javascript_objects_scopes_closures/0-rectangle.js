@@ -1,7 +1,9 @@
 #!/usr/bin/node
 // THis file defines a rectangle
 
-class Rectangle {
-  constructor () {
-  }
-}
+/**
+ * Define a class Rectangle
+ * @type {module.Rectangle}
+ */
+module.exports = class Rectangle {
+};
