@@ -20,7 +20,7 @@ if (input.length >= 1) {
       let content = JSON.parse(Buffer.concat(data).toString());
       content.forEach((u) => {
         let id = u.userId.toString();
-        if (!users[id] && u.completed === true) { users[id] = 1; }
+        if (!users[id] && u.completed === true) { users[id] = 0; }
         if (u.completed === true) { users[id] += 1; }
       });
       // Object.entries(users)
