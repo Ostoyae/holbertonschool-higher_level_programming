@@ -23,7 +23,8 @@ if (input.length >= 1) {
         if (!users[id]) { users[id] = 0; }
         if (u.completed === true) { users[id] += 1; }
       });
-      Object.entries(users).map((k, v) => { if (v === 0) delete users.k; });
+      Object.entries(users)
+        .map((ele) => { if (ele[1] === 0) { delete users[ele[0]]; } });
       console.log(users);
     });
 }
