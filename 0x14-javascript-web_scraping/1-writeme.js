@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = process.argv.slice(2);
 
 if (path[0]) {
-  fs.readFile(path[0], 'utf8', (err, data) => {
+  fs.writeFile(path[0], path[1], (err) => {
     if (err) {
       if (err.code === 'ENOENT') {
         console.error(err);
@@ -14,6 +14,5 @@ if (path[0]) {
       }
       throw err;
     }
-    console.log(data);
   });
 }
