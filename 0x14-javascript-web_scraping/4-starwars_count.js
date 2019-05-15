@@ -20,6 +20,6 @@ if (url) {
       films.results.forEach((mov) => {
         if (mov.characters.includes(person)) { count++; }
       });
-      if (count > 0) { console.log(count); }
+      console.log(count);
     });
 }
