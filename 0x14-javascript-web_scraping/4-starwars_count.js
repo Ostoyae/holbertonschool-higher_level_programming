@@ -8,6 +8,9 @@ let data = [];
 
 if (url) {
   request.get(url)
+    .on('error', (err) => {
+      console.error(err);
+    })
     .on('data', (chunk) => {
       data.push(chunk);
     })
@@ -17,6 +20,6 @@ if (url) {
       films.results.forEach((mov) => {
         if (mov.characters.includes(person)) { count++; }
       });
-      console.log(count);
+      if (count > 0) { console.log(count); }
     });
 }
