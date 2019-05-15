@@ -21,8 +21,5 @@ if (url) {
         if (mov.characters.includes(person)) { count++; }
       });
       console.log(count);
-      return;
     });
-}
-
-console.log(0);
+} else { console.log(0); }
