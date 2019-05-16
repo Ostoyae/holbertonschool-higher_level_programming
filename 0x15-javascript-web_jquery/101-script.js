@@ -20,6 +20,4 @@ window.onload = function () {
         // alert("NOOOOoooooooo!!!!");
         list.innerHTML = "";
     });
-
-
 };
