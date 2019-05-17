@@ -10,8 +10,6 @@ window.onload = function () {
             get_hello(field);
         }
     });
-
-
 };
 
 function get_hello(field) {
